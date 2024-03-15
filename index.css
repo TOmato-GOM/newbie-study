@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  background-color: aliceblue;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.input_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#todoInput {
+  width: calc(100% - 45px);
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+#todoInput:focus {
+  outline: none;
+}
+
+#addBtn {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: brown;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#addBtn:active {
+  background-color: rgb(106, 26, 26);
+}
+
+#addBtn span {
+  display: block;
+  width: 2px;
+  height: 15px;
+  background-color: #ffe8ad;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#addBtn span:last-child {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+#todoList {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+#todoList li {
+  padding: 10px 0;
+  display: flex;
+}
+
+#todoList button {
+  width: 19px;
+  height: 19px;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+#clear_btn {
+  border: 1px solid lightblue;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+  align-self: flex-end;
+}
+
+#clear_btn:active {
+  background-color: rgb(211, 211, 211);
+}
+
+.edit_btn,
+.delete_btn {
+  padding-left: 10px;
+  align-self: flex-end;
+  justify-self: end;
+  cursor: pointer;
+}
+
+.complete {
+  text-decoration: line-through;
+  color: gray;
+}
